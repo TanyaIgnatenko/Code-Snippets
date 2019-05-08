@@ -4,7 +4,7 @@ React hooks snippets (aka [live templates](https://www.jetbrains.com/help/idea/2
 
 ## Installation
 
-1. [Download ReactHooks.xml](ReactHooks.xml) file and copy it to your JetBrains editor's templates folder:
+1. Download [ReactHooks.xml](ReactHooks.xml) file and copy it to your JetBrains editor's templates folder:
 
     - Windows: `<your home directory>\.<product name><version number>\config\templates`
     - Linux: `~\.<product name><version number>\config\templates`
