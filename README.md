@@ -23,7 +23,7 @@ React hooks snippets (aka [live templates](https://www.jetbrains.com/help/idea/2
 ### `usst`
 
 ```js
-const [$VALUE$, set$CAPITALIZE_VALUE$] = useState($INIT_VALUE$); 
+const [$VALUE$, set$CAPITALIZED_VALUE$] = useState($INIT_VALUE$); 
 
 ```
 
