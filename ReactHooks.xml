@@ -1,7 +1,7 @@
 <templateSet group="React hooks">
-  <template name="usst" value="const [$VALUE$, set$CAPITALIZE_VALUE$] = useState($INIT_VALUE$); " description="useState" toReformat="false" toShortenFQNames="true">
+  <template name="usst" value="const [$VALUE$, set$CAPITALIZED_VALUE$] = useState($INIT_VALUE$); " description="useState" toReformat="false" toShortenFQNames="true">
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CAPITALIZE_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="false" />
+    <variable name="CAPITALIZED_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="false" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_EXPRESSION" value="true" />
