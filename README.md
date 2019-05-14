@@ -27,6 +27,20 @@ const [$VALUE$, set$CAPITALIZED_VALUE$] = useState($INIT_VALUE$);
 
 ```
 
+### `usred`
+
+```js
+const [state, dispatch] = useReducer($REDUCER$, $INIT_VALUE$); 
+
+```
+
+### `usmultistate`
+
+```js
+const [state, setState] = useReducer($REDUCER$, $INIT_VALUE$); 
+
+```
+
 ### `usef`
 
 ```js
@@ -60,10 +74,41 @@ $CALC_VALUE$
 
 ```
 
-### `usr`
+### `usref`
 
 ```js
 const $REF$ = useRef($INIT_VALUE$);
 
 ```
 
+### `uscall`
+
+```js
+const $CALLBACK$ = useCallback(
+  () => {
+    $DO_SOMETHING$
+  },
+  [$DEPENDENCIES$],
+);
+
+```
+## Extra
+### `usinpust`
+
+```js
+const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useInputState($INIT_VALUE$); 
+
+```
+### `uschest`
+
+```js
+const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useCheckboxState($INIT_VALUE$); 
+
+```
+
+### `usinpur`
+
+```js
+const [inputsState, handleChange] = useInputsReducer($INIT_VALUE$); 
+
+```
