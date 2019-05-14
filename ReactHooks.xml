@@ -67,7 +67,7 @@
   </template>
   <template name="usinpust" value="const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useInputState($INIT_VALUE$); " description="useInputState" toReformat="false" toShortenFQNames="true">
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CAPITALIZE_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPITALIZE_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="true" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_EXPRESSION" value="true" />
@@ -76,14 +76,14 @@
   </template>
   <template name="uschest" value="const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useCheckboxState($INIT_VALUE$); " description="useCheckboxState" toReformat="false" toShortenFQNames="true">
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CAPITALIZE_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPITALIZE_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="true" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_EXPRESSION" value="true" />
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usinpur" value="const [inputsState, handleChange] = useInputReducer($INIT_VALUE$); " description="useInputReducer" toReformat="false" toShortenFQNames="true">
+  <template name="usinpur" value="const [inputsState, handleChange] = useInputsReducer($INIT_VALUE$); " description="useInputReducer" toReformat="false" toShortenFQNames="true">
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_EXPRESSION" value="true" />
