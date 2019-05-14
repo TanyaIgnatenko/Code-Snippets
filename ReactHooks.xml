@@ -1,7 +1,7 @@
 <templateSet group="React hooks">
-  <template name="usst" value="const [$VALUE$, set$CAPITALIZED_VALUE$] = useState($INIT_VALUE$); " description="useState" toReformat="false" toShortenFQNames="true">
+  <template name="usst" value="const [$VALUE$, set$CAPITALIZE_VALUE$] = useState($INIT_VALUE$); " description="useState" toReformat="false" toShortenFQNames="true">
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CAPITALIZED_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="false" />
+    <variable name="CAPITALIZE_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="false" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_EXPRESSION" value="true" />
@@ -33,7 +33,7 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usr" value="const $REF$ = useRef($INIT_VALUE$);" description="useRef" toReformat="false" toShortenFQNames="true">
+  <template name="usref" value="const $REF$ = useRef($INIT_VALUE$);" description="useRef" toReformat="false" toShortenFQNames="true">
     <variable name="REF" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -44,6 +44,56 @@
   <template name="usco" value="const {$VALUE$} = useContext($CONTEXT$);" description="useContext" toReformat="false" toShortenFQNames="true">
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CONTEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="usred" value="const [state, dispatch] = useReducer($REDUCER$, $INIT_VALUE$); " description="useReducer" toReformat="false" toShortenFQNames="true">
+    <variable name="REDUCER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="usmultistate" value="const [state, setState] = useReducer($REDUCER$, $INIT_VALUE$); " description="useReducer for multi-state" toReformat="false" toShortenFQNames="true">
+    <variable name="REDUCER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="usinpust" value="const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useInputState($INIT_VALUE$); " description="useInputState" toReformat="false" toShortenFQNames="true">
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPITALIZE_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="uschest" value="const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useCheckboxState($INIT_VALUE$); " description="useCheckboxState" toReformat="false" toShortenFQNames="true">
+    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPITALIZE_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="usinpur" value="const [inputsState, handleChange] = useInputReducer($INIT_VALUE$); " description="useInputReducer" toReformat="false" toShortenFQNames="true">
+    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="uscall" value="const $CALLBACK$ = useCallback(&#10;  () =&gt; {&#10;    $DO_SOMETHING$&#10;  },&#10;  [$DEPENDENCIES$],&#10;);" toReformat="false" toShortenFQNames="true">
+    <variable name="CALLBACK" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DO_SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEPENDENCIES" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_EXPRESSION" value="true" />
       <option name="JS_STATEMENT" value="true" />
