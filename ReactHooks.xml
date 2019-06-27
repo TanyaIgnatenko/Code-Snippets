@@ -33,8 +33,8 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usref" value="const $REF$ = useRef($INIT_VALUE$);" description="useRef" toReformat="false" toShortenFQNames="true">
-    <variable name="REF" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="usref" value="const $name$Ref = useRef($INIT_VALUE$);" description="useRef" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_EXPRESSION" value="true" />
