@@ -77,7 +77,7 @@ $CALC_VALUE$
 ### `usref`
 
 ```js
-const $REF$ = useRef($INIT_VALUE$);
+const $name$Ref = useRef($INIT_VALUE$);
 
 ```
 
