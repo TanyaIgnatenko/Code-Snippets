@@ -1,7 +1,6 @@
 # react-hooks-snippets
 
 React hooks code snippets for WebStorm.  
-Also here is a repository with [redux-boilerplate-snippets](https://github.com/TanyaIgnatenko/redux-boilerplate-snippets).
 
 ## Installation
 
