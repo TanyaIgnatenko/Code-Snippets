@@ -1,7 +1,7 @@
 # react-hooks-snippets
 
 React hooks snippets (aka [live templates](https://www.jetbrains.com/help/idea/2016.1/live-templates.html)) for JetBrains series editors.  
-Also there is a repository with [redux-boilerplate-snippets](https://github.com/TanyaIgnatenko/redux-boilerplate-snippets).
+Also here is a repository with [redux-boilerplate-snippets](https://github.com/TanyaIgnatenko/redux-boilerplate-snippets).
 
 ## Installation
 
@@ -24,52 +24,36 @@ Also there is a repository with [redux-boilerplate-snippets](https://github.com/
 ### `usst`
 
 ```js
-const [$VALUE$, set$CAPITALIZED_VALUE$] = useState($INIT_VALUE$); 
+const [$VALUE$, set$CAPITALIZED_VALUE$] = useState$END$($INIT_VALUE$); 
 
 ```
 
 ### `usred`
 
 ```js
-const [state, dispatch] = useReducer($REDUCER$, $INIT_VALUE$); 
-
-```
-
-### `usmultistate`
-
-```js
-const [state, setState] = useReducer($REDUCER$, $INIT_VALUE$); 
+const [$STATE$, dispatch] = useReducer$END$($REDUCER$, $INIT_VALUE$); 
 
 ```
 
 ### `usef`
 
 ```js
-useEffect(() => {
+useEffect$END$(() => {
    $BODY$
-}, [$DEPENDENCIES$]);
-
-```
-
-### `usfetch`
-
-```js
-useEffect(() => {
-   fetch$DATA$($DEPENDENCIES$)
 }, [$DEPENDENCIES$]);
 
 ```
 ### `usco`
 
 ```js
-const {$VALUE$} = useContext($CONTEXT$);
+const {$VALUE$} = useContext$END$($CONTEXT$);
 
 ```
 
 ### `usm`
 
 ```js
-const $VALUE$ = useMemo(() => {
+const $VALUE$ = useMemo$END$(() => {
 $CALC_VALUE$
 }, [$DEPENDENCIES$]); 
 
@@ -78,14 +62,14 @@ $CALC_VALUE$
 ### `usref`
 
 ```js
-const $name$Ref = useRef($INIT_VALUE$);
+const $REF$ = useRef$END$($INIT_VALUE$);
 
 ```
 
 ### `uscall`
 
 ```js
-const $CALLBACK$ = useCallback(
+const $CALLBACK$ = useCallback$END$(
   () => {
     $DO_SOMETHING$
   },
@@ -93,23 +77,33 @@ const $CALLBACK$ = useCallback(
 );
 
 ```
-## Extra
-### `usinpust`
+
+### `usloc`
 
 ```js
-const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useInputState($INIT_VALUE$); 
+const location = useLocation$END$(); 
 
 ```
-### `uschest`
+### `ushist`
 
 ```js
-const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useCheckboxState($INIT_VALUE$); 
+const history = useHistory$END$();
 
 ```
 
-### `usinpur`
+### `ussel`
 
 ```js
-const [inputsState, handleChange] = useInputsReducer($INIT_VALUE$); 
+const $DATA$ = useSelector$END$(select$METHOD_NAME$, $EQUALITY_FN$);
+
+```
+
+### `ussel-param`
+
+```js
+const $DATA$ = useSelector$END$(state =>
+        select$METHOD_NAME$(state,  $PARAMS$),
+        $EQUALITY_FN$
+);
 
 ```
