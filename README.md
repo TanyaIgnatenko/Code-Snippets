@@ -1,6 +1,6 @@
 # react-hooks-snippets
 
-React hooks snippets (aka [live templates](https://www.jetbrains.com/help/idea/2016.1/live-templates.html)) for JetBrains series editors.  
+React hooks snippets (aka [live templates](https://www.jetbrains.com/help/idea/2016.1/live-templates.html)) for JetBrains series editors to speed up a development process.  
 Also here is a repository with [redux-boilerplate-snippets](https://github.com/TanyaIgnatenko/redux-boilerplate-snippets).
 
 ## Installation
