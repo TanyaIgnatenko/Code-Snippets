@@ -1,5 +1,5 @@
 <templateSet group="React hooks">
-  <template name="usst" value="const [$VALUE$, set$CAPITALIZE_VALUE$] = useState($INIT_VALUE$); " description="useState" toReformat="false" toShortenFQNames="true">
+  <template name="usst" value="const [$VALUE$, set$CAPITALIZE_VALUE$] = useState$END$($INIT_VALUE$); " description="useState" toReformat="true" toShortenFQNames="true">
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CAPITALIZE_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="false" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
@@ -8,7 +8,7 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usef" value="useEffect(() =&gt; {&#10;   $BODY$&#10;}, [$DEPENDENCIES$]);" description="useEffect" toReformat="true" toShortenFQNames="true">
+  <template name="usef" value="useEffect$END$(() =&gt; {&#10;   $BODY$&#10;}, [$DEPENDENCIES$]);" description="useEffect" toReformat="true" toShortenFQNames="true">
     <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="DEPENDENCIES" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -16,15 +16,7 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usfetch" value="useEffect(() =&gt; {&#10;   fetch$DATA$($DEPENDENCIES$)&#10;}, [$DEPENDENCIES$]);" description="useEffect that fetch data" toReformat="false" toShortenFQNames="true">
-    <variable name="DATA" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="DEPENDENCIES" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JS_STATEMENT" value="true" />
-    </context>
-  </template>
-  <template name="usm" value="const $VALUE$ = useMemo(() =&gt; {&#10;$CALC_VALUE$&#10;}, [$DEPENDENCIES$]); &#10;&#10;" description="useMemo" toReformat="false" toShortenFQNames="true">
+  <template name="usm" value="const $VALUE$ = useMemo$END$(() =&gt; {&#10;$CALC_VALUE$;&#10;}, [$DEPENDENCIES$]); &#10;&#10;" description="useMemo" toReformat="true" toShortenFQNames="true">
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CALC_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="DEPENDENCIES" expression="" defaultValue="" alwaysStopAt="true" />
@@ -33,15 +25,25 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usref" value="const $name$Ref = useRef($INIT_VALUE$);" description="useRef" toReformat="false" toShortenFQNames="true">
-    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="usref" value="const $REF$ = useRef$END$($INIT_VALUE$);" description="useRef" toReformat="true" toShortenFQNames="true">
+    <variable name="REF" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_EXPRESSION" value="true" />
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usco" value="const {$VALUE$} = useContext($CONTEXT$);" description="useContext" toReformat="false" toShortenFQNames="true">
+  <template name="uscall" value="const $CALLBACK$ = useCallback$END$(($PARAMS$) =&gt; {&#10;    $DO_SOMETHING$&#10;}, [$DEPENDENCIES$]);" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="CALLBACK" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DO_SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEPENDENCIES" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="usco" value="const $VALUE$ = useContext$END$($CONTEXT$);" description="useContext" toReformat="true" toShortenFQNames="true">
     <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="CONTEXT" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -49,7 +51,8 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usred" value="const [state, dispatch] = useReducer($REDUCER$, $INIT_VALUE$); " description="useReducer" toReformat="false" toShortenFQNames="true">
+  <template name="usred" value="const [$STATE$, dispatch] = useReducer$END$($REDUCER$, $INIT_VALUE$); " description="useReducer" toReformat="true" toShortenFQNames="true">
+    <variable name="STATE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="REDUCER" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -57,46 +60,46 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="usmultistate" value="const [state, setState] = useReducer($REDUCER$, $INIT_VALUE$); " description="useReducer for multi-state" toReformat="false" toShortenFQNames="true">
-    <variable name="REDUCER" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="usdisp" value="const dispatch = useDispatch$END$();" description="useDispatch" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JS_STATEMENT" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="usinpust" value="const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useInputState($INIT_VALUE$); " description="useInputState" toReformat="false" toShortenFQNames="true">
-    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CAPITALIZE_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="true" />
-    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="usloc" value="const location = useLocation$END$();&#10;" description="useLocation" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JS_STATEMENT" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="uschest" value="const [$VALUE$, handle$CAPITALIZE_VALUE$Change] = useCheckboxState($INIT_VALUE$); " description="useCheckboxState" toReformat="false" toShortenFQNames="true">
-    <variable name="VALUE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="CAPITALIZE_VALUE" expression="capitalize(VALUE)" defaultValue="" alwaysStopAt="true" />
-    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ushist" value="const history = useHistory$END$();" description="useHistory" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JS_STATEMENT" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="usinpur" value="const [inputsState, handleChange] = useInputsReducer($INIT_VALUE$); " description="useInputReducer" toReformat="false" toShortenFQNames="true">
-    <variable name="INIT_VALUE" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ussel" value="const $DATA$ = useSelector$END$(select$METHOD_NAME$, $EQUALITY_FN$);" description="useSelector" toReformat="true" toShortenFQNames="true">
+    <variable name="DATA" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EQUALITY_FN" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JS_STATEMENT" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="uscall" value="const $CALLBACK$ = useCallback(&#10;  () =&gt; {&#10;    $DO_SOMETHING$&#10;  },&#10;  [$DEPENDENCIES$],&#10;);" toReformat="false" toShortenFQNames="true">
-    <variable name="CALLBACK" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="DO_SOMETHING" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="DEPENDENCIES" expression="" defaultValue="" alwaysStopAt="true" />
+  <template name="ussel-param" value="const $DATA$ = useSelector$END$(state =&gt;&#10;    select$METHOD_NAME$(state,  $PARAMS$),&#10;$EQUALITY_FN$&#10;);" description="useSelector with params" toReformat="true" toShortenFQNames="true">
+    <variable name="DATA" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="METHOD_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EQUALITY_FN" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JS_STATEMENT" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="TypeScript" value="true" />
     </context>
   </template>
 </templateSet>
