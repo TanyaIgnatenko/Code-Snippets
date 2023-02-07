@@ -38,7 +38,7 @@ const [$STATE$, dispatch] = useReducer$END$($REDUCER$, $INIT_VALUE$);
 
 ```js
 useEffect$END$(() => {
-   $BODY$
+    $BODY$
 }, [$DEPENDENCIES$]);
 
 ```
@@ -53,7 +53,7 @@ const {$VALUE$} = useContext$END$($CONTEXT$);
 
 ```js
 const $VALUE$ = useMemo$END$(() => {
-   $CALC_VALUE$
+    $CALC_VALUE$
 }, [$DEPENDENCIES$]);
 
 ```
@@ -69,10 +69,10 @@ const $REF$ = useRef$END$($INIT_VALUE$);
 
 ```js
 const $CALLBACK$ = useCallback$END$(
-        () => {
-           $DO_SOMETHING$
-        },
-        [$DEPENDENCIES$],
+    () => {
+        $DO_SOMETHING$
+    },
+    [$DEPENDENCIES$],
 );
 
 ```
@@ -101,8 +101,8 @@ const $DATA$ = useSelector$END$(select$METHOD_NAME$, $EQUALITY_FN$);
 
 ```js
 const $DATA$ = useSelector$END$(state =>
-                select$METHOD_NAME$(state,  $PARAMS$),
-        $EQUALITY_FN$
+    select$METHOD_NAME$(state,  $PARAMS$),
+    $EQUALITY_FN$
 );
 
 ```
